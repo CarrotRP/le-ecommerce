@@ -1,0 +1,19 @@
+nav{
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    color: var(--txt-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.right-nav input{
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
