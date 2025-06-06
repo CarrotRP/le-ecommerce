@@ -1,0 +1,16 @@
+.body-section{
+    margin: 20px 0;
+    /* padding-top: 40px; */
+}
+.title{
+    font-size: 35px;
+    margin: 20px 0;
+}
+.item-list{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: 20px;
+}
+.card img{
+    width: 100%;
+}
