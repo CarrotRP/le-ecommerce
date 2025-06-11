@@ -1,8 +1,37 @@
-function ProfilePopup(props){
-    return(
-        <div className="profile-popup" ref={props.profileRef}>
-            <div className="popup-content">
-                <p>hello</p>
+function ProfilePopup(props) {
+    return (
+        <div className="profile-popup" ref={props.popupRef}>
+            <div className="popup-content" ref={props.popupContentRef}>
+                <div className="popup-head">
+                    <button className="edit">&#9998;</button>
+                    <p>Me</p>
+                    <button className="close" onClick={props.handlePopupClose}>&#215;</button> {/*for some reason &time; doesnt work */}
+                </div>
+                <div className="popup-body">
+                    <h2>CarrotS</h2>
+                    <section className="lang">
+                        <h2>ភាសា/Language</h2>
+                        <span className="eng">
+                            <label htmlFor="english">English</label>
+                            <input type="radio" id="english" value='English' name="lang" />
+                        </span>
+                        <span className="khmer">
+                            <label htmlFor="khmer">ខ្មែរ</label>
+                            <input type="radio" id="khmer" value='khmer' name="lang" />
+                        </span>
+                    </section>
+                    <section className="setting">
+                        <h2>Settings</h2>
+                        <span className="dark-mode">
+                            <p>Dark Mode</p>
+                            <button className="switch">
+                                <div className="handle"></div>
+                                <div className="switch-bg"></div>  
+                            </button> {/*iphone switch btn style */}
+                        </span>
+                    </section>
+                </div>
+                <button className="logout">Log out</button>
             </div>
         </div>
     );
