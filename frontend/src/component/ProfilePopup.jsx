@@ -1,11 +1,13 @@
+import './ProfilePopup.css';
+
 function ProfilePopup(props) {
     return (
-        <div className="profile-popup" ref={props.popupRef}>
-            <div className="popup-content" ref={props.popupContentRef}>
+        <div className="profile-popup" ref={props.profilePopupRef}>
+            <div className="popup-content" ref={props.profileContentRef}>
                 <div className="popup-head">
                     <button className="edit">&#9998;</button>
                     <p>Me</p>
-                    <button className="close" onClick={props.handlePopupClose}>&#215;</button> {/*for some reason &time; doesnt work */}
+                    <button className="close" onClick={props.handleProfilePopupClose}>&#215;</button> {/*for some reason &time; doesnt work */}
                 </div>
                 <div className="popup-body">
                     <h2>CarrotS</h2>

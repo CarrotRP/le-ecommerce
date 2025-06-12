@@ -1,0 +1,74 @@
+.cart-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 20px;
+}
+
+.cart-card img {
+    height: 100%;
+}
+
+/* second column */
+.in-cart-info{
+    display: grid;
+    grid-template-rows: repeat(2, 30px);
+}
+.options {
+    display: flex;
+}
+.size{
+    margin-right: 10px;
+}
+
+select {
+    border: none;
+    padding: 5px 15px;
+    appearance: none; /*remove the triangle drop thing*/
+    outline: none;
+    user-select: none;
+    background-color: transparent;
+    z-index: 1;
+}
+.select-wrapper{
+    margin-top: 10px;
+    display: grid;
+    height: 30px;
+    grid-template-areas: 'select';
+    align-items: center;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+}
+.size .select-wrapper{
+    width: 70px;
+}
+.quantity .select-wrapper{
+    width: 50px;
+}
+select, .select-wrapper::after{
+    grid-area: select;
+}
+.select-wrapper::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: black;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%); /*triangle*/
+    justify-self: end;
+    margin-right: 10px;
+}
+select, select::after{
+    grid-area: select;
+}
+
+/* third column */
+.remove {
+    width: 50px;
+    height: 50px;
+    justify-self: end;
+}
+
+.in-cart-price {
+    grid-area: 2 / 3 / 4 / 4;
+    justify-self: end;
+}

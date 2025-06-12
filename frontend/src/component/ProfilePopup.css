@@ -1,0 +1,112 @@
+
+/* rrofile popup styling */
+.profile-popup {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms;
+}
+.popup-active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup-content {
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 500px;
+    height: 70vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    padding: 30px;
+    user-select: none;
+}
+
+/* profile popup head */
+.popup-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-head button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    line-height: 0;
+}
+
+.edit {
+    font-size: 20px;
+    transform: rotateY(180deg);
+}
+
+.close {
+    font-size: 30px;
+    font-weight: 200;
+}
+.close:hover{
+    cursor: pointer;
+}
+/* popup body */
+.popup-body {
+    margin: 40px 0;
+    display: grid;
+    grid-template-rows: 30px 1fr 80px;
+    gap: 20px;
+}
+
+.popup-body span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.dark-mode button {
+    border: none;
+    border-radius: 60px;
+    width: 50px;
+    height: 30px;
+    position: relative;
+}
+
+.switch-bg {
+    background-color: #2ecc71;
+    height: inherit;
+    border-radius: inherit;
+    /* background-color: white; */
+}
+
+.handle {
+    background-color: whitesmoke;
+    height: inherit;
+    border-radius: 50%;
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 0px 0 hsla(0, 0%, 0%, 0.04), 0 4px 9px hsla(0, 0%, 0%, 0.13), 0 3px 3px hsla(0, 0%, 0%, 0.05);
+    right: 0;
+    /* left: 0; */
+}
+
+/* logout btn */
+.logout {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
