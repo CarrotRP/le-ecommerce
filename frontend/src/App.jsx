@@ -1,8 +1,7 @@
 import Navbar from "./component/Navbar"
-import Home from "./content/Home"
+import Home from "./page/Home"
 import Footer from "./component/Footer"
 import ProductDetail from "./page/ProductDetail"
-import CartPopup from "./component/CartPopup"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 

@@ -1,6 +1,6 @@
-import Banner from "./Banner";
-import Marquee from './Marquee';
-import Section from './Section';
+import Banner from "../content/Banner";
+import Marquee from '../content/Marquee';
+import Section from '../content/Section';
 import './Home.css'
 
 function Home(){

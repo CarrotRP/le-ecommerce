@@ -35,3 +35,12 @@ nav {
 .right-nav img{
     cursor: pointer;
 }
+.right-nav button{
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: var(--txt-color);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}

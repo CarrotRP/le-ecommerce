@@ -1,5 +1,5 @@
 
-/* rrofile popup styling */
+/* profile popup styling */
 .profile-popup {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.4);
@@ -29,6 +29,7 @@
     margin: auto auto;
     padding: 30px;
     user-select: none;
+    border-radius: 5px;
 }
 
 /* profile popup head */
