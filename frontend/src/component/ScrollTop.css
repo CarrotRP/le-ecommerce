@@ -1,0 +1,91 @@
+.scrollTop {
+    position: fixed;
+    right: 30px;
+    bottom: 10vh;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 15px;
+    border: none;
+    background-color: transparent;
+    transition: opacity 0.3s;
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    width: 25px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+.scrollTop-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mouse-scroll {
+    width: 1px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    animation: scroll-bounces 0.5s infinite alternate;
+}
+
+.arrows {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.arrows svg {
+    margin: 0 auto;
+    line-height: 0;
+    stroke-width: 2;
+    stroke: black;
+}
+
+.arrows svg:nth-child(1) {
+    animation: fadeIn 1s infinite;
+}
+
+.arrows svg:nth-child(2) {
+    animation: fadeOut 1s infinite;
+}
+
+@keyframes scroll-bounces {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

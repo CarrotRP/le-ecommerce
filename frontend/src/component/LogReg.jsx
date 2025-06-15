@@ -76,6 +76,8 @@ function LogReg(props) {
                         <div className="select-wrapper">
                             <select name="province" id="province">
                                 <option value="Kandal">Kandal</option>
+                                <option value="Phnom Penh">Phnom Penh</option>
+                                <option value="Siem Reab">Siem Reab</option>
                             </select>
                         </div>
                     </div>

@@ -112,6 +112,11 @@
 .location .select-wrapper{
     height: 50px;
 }
+#province option{
+    border-radius: 10px;
+    padding: 8px;
+    border: none;
+}
 
 /* both */
 .login-content button,
