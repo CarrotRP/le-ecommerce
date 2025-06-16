@@ -63,7 +63,7 @@ function Navbar() {
 
         loginRef.current.style.display = 'none';
         registerRef.current.style.display = 'none';
-        
+
         setActiveTab('');
     }
 
@@ -74,6 +74,11 @@ function Navbar() {
     }
     const handleProfilePopupClose = () => {
         profilePopupRef.current.classList.remove('popup-active');
+    }
+
+    //seller function
+    const handleAddProduct = () => {
+
     }
 
     useEffect(() => {
@@ -118,9 +123,12 @@ function Navbar() {
             <div className="right-nav">
                 {/* placeholder image for now */}
                 <input type="text" className='search' placeholder='🔍Search' />
+                <a href="/add-edit">
+                    <img src="#" alt="add" onClick={handleAddProduct} />
+                </a>
                 <img src="#" alt="cart" onClick={handleCartClick} />
                 <CartPopup cartPopupRef={cartPopupRef} cartContentRef={cartContentRef} handleCartPopupClose={handleCartPopupClose} />
-                {/* <img src="#" alt="profile" onClick={handleProfileClick} /> */}
+                <img src="#" alt="profile" onClick={handleProfileClick} />
                 <button onClick={handleLoginClick}>Login</button>
                 <button onClick={handleRegisterClick}>Register</button>
                 <LogReg activeTab={activeTab} setActiveTab={setActiveTab} logregPopupRef={logregPopupRef} logregContentRef={logregContentRef} loginRef={loginRef} registerRef={registerRef} handleLogRegClose={handleLogRegClose} />

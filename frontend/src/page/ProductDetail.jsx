@@ -19,6 +19,10 @@ function ProductDetail() {
             </main>
             {/* product info, add to cart btn, etc... */}
             <div className="product-info">
+                <a href="/profile" className='seller' style={{gap: '20px'}}>
+                    <img src="#" alt="seller-profile" />
+                    <h4>Seller name</h4>
+                </a>
                 <h2>US $20.99</h2>
                 <p>Slim Fit Jeans</p>
                 <section className="size">

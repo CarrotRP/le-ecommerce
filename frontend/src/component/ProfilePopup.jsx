@@ -10,7 +10,10 @@ function ProfilePopup(props) {
                     <button className="close" onClick={props.handleProfilePopupClose}>&#215;</button> {/*for some reason &time; doesnt work */}
                 </div>
                 <div className="popup-body">
+                    <span style={{justifyContent: 'start', gap: '20px'}}>
                     <h2>CarrotS</h2>
+                    <a href="/profile">more</a> {/*this is for sellers only */}
+                    </span>
                     <section className="lang">
                         <h2>ភាសា/Language</h2>
                         <span className="eng">

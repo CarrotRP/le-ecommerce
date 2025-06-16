@@ -38,15 +38,15 @@ function LogReg(props) {
                     <a href='#'>New to Le E-commerce? Register</a>
                 </section>
                 <section className="register-content" ref={props.registerRef}>
-                    <div className='gender'>
-                        <p>Gender(Required)</p>
-                        <span className='male'>
-                            <input type="radio" id="male" value='male' name="gender" />
-                            <label htmlFor="male">Male</label>
+                    <div className='role'>
+                        <p>Role(Required)</p>
+                        <span className='seller'>
+                            <input type="radio" id="seller" value='seller' name="role" />
+                            <label htmlFor="seller">Seller</label>
                         </span>
-                        <span className='female'>
-                            <input type="radio" id="female" value='female' name="gender" />
-                            <label htmlFor="female">Female</label>
+                        <span className='buyer'>
+                            <input type="radio" id="buyer" value='buyer' name="role" />
+                            <label htmlFor="buyer">Buyer</label>
                         </span>
                     </div>
                     <div className="name">

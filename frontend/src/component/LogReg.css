@@ -72,7 +72,7 @@
 /* login content */
 .login-content {
     /*when switching(login, register)*/
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 10px;
 }
@@ -89,13 +89,13 @@
     gap: 10px;
 }
 
-.gender {
+.role {
     display: flex;
     gap: 20px;
 }
 
-.male,
-.female {
+.seller,
+.buyer {
     display: flex;
     gap: 5px;
 }

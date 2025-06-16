@@ -1,4 +1,10 @@
 .card{
     text-decoration: none;
     color: var(--secondary-txt-color);
+    position: relative;
+}
+.to-profile{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
 }
