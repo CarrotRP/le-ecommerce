@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 
 import './Navbar.css'
 import ProfilePopup from './ProfilePopup';
@@ -8,6 +10,8 @@ import LogReg from './LogReg';
 
 function Navbar() {
     const [activeTab, setActiveTab] = useState('');
+    //context
+    const { state, dispatch } = useContext(UserContext)
 
     //cart ref
     const cartPopupRef = useRef(null);
@@ -27,6 +31,7 @@ function Navbar() {
 
     //cart clicks
     const handleCartClick = (e) => {
+        console.log(state);
         e.stopPropagation();
         cartPopupRef.current.classList.add('popup-active');
         cartContentRef.current.classList.add('cart-content-active');
@@ -69,6 +74,7 @@ function Navbar() {
 
     //profile clicks
     const handleProfileClick = (e) => {
+        console.log(state);
         e.stopPropagation();
         profilePopupRef.current.classList.add('popup-active');
     }
@@ -123,16 +129,26 @@ function Navbar() {
             <div className="right-nav">
                 {/* placeholder image for now */}
                 <input type="text" className='search' placeholder='🔍Search' />
-                <a href="/add-edit">
-                    <img src="#" alt="add" onClick={handleAddProduct} />
-                </a>
-                <img src="#" alt="cart" onClick={handleCartClick} />
+                {state.user?.role == 'seller' ?
+                    <a href="/add-edit">
+                        <img src="#" alt="add" onClick={handleAddProduct} />
+                    </a> : ''
+                }
+                <img src="#" alt="cart" onClick={handleCartClick} /> {/*order for seller, cart for buyer */}
                 <CartPopup cartPopupRef={cartPopupRef} cartContentRef={cartContentRef} handleCartPopupClose={handleCartPopupClose} />
-                <img src="#" alt="profile" onClick={handleProfileClick} />
-                <button onClick={handleLoginClick}>Login</button>
-                <button onClick={handleRegisterClick}>Register</button>
-                <LogReg activeTab={activeTab} setActiveTab={setActiveTab} logregPopupRef={logregPopupRef} logregContentRef={logregContentRef} loginRef={loginRef} registerRef={registerRef} handleLogRegClose={handleLogRegClose} />
-                <ProfilePopup profilePopupRef={profilePopupRef} profileContentRef={profileContentRef} handleProfilePopupClose={handleProfilePopupClose} />
+
+                {state.user ?
+                    <>
+                        <img src="#" alt="profile" onClick={handleProfileClick} />
+                        <ProfilePopup profilePopupRef={profilePopupRef} profileContentRef={profileContentRef} handleProfilePopupClose={handleProfilePopupClose} />
+                    </>
+                    :
+                    <>
+                        <button onClick={handleLoginClick}>Login</button>
+                        <button onClick={handleRegisterClick}>Register</button>
+                        <LogReg activeTab={activeTab} setActiveTab={setActiveTab} logregPopupRef={logregPopupRef} logregContentRef={logregContentRef} loginRef={loginRef} registerRef={registerRef} handleLogRegClose={handleLogRegClose} dispatch={dispatch} />
+                    </>
+                }
             </div>
         </nav>
     );

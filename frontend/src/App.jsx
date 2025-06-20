@@ -6,6 +6,7 @@ import ScrollToTop from "./component/ScrollToTop" //this one is for navigation
 import ProductDetail from "./page/ProductDetail"
 import SellerProfile from "./page/SellerProfile"
 import AddEdit from "./page/AddEdit"
+import OrderHistory from "./page/OrderHistory"
 
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { useState, useEffect } from "react"
@@ -38,6 +39,7 @@ function App() {
         <Route path="/product" element={<ProductDetail />}></Route>
         <Route path="/profile" element={<SellerProfile/>}></Route>
         <Route path="/add-edit" element={<AddEdit/>}></Route>
+        <Route path="/order-history" element={<OrderHistory/>}></Route>
       </Routes>
       <ScrollTop showButton={showButton} handleToTopClick={handleToTopClick} />
       <Footer />

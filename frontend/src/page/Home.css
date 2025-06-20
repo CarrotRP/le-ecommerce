@@ -1,5 +1,6 @@
 .home, 
-.seller-profile{
+.seller-profile,
+.order-history{
     padding-top: 60px;
     max-width: 85vw;
     margin: 0 auto;

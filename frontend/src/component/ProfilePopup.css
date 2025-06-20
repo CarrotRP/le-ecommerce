@@ -63,16 +63,20 @@
 .popup-body {
     margin: 40px 0;
     display: grid;
-    grid-template-rows: 30px 1fr 80px;
+    grid-template-rows: 80px 1fr 80px; /*50px 1fr 80px for seller, maybe. probably 80px 1fr 80px for seller order history(if add)*/
     gap: 20px;
 }
-
-.popup-body span {
+.popup-body .user{
+    border-bottom: 1px solid black;
+}
+.popup-body span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
     padding: 10px 0;
+}
+.popup-body span:not(:first-child){
+    border-bottom: 1px solid black;
 }
 
 .dark-mode button {

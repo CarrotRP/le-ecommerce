@@ -10,10 +10,13 @@ function ProfilePopup(props) {
                     <button className="close" onClick={props.handleProfilePopupClose}>&#215;</button> {/*for some reason &time; doesnt work */}
                 </div>
                 <div className="popup-body">
-                    <span style={{justifyContent: 'start', gap: '20px'}}>
-                    <h2>CarrotS</h2>
-                    <a href="/profile">more</a> {/*this is for sellers only */}
-                    </span>
+                    <section className="user">
+                        <span style={{ justifyContent: 'start', gap: '20px' }}>
+                            <h2>CarrotS</h2>
+                            <a href="/profile">more</a> {/*this is for sellers only */}
+                        </span>
+                        <a href='/order-history'>Order history</a>
+                    </section>
                     <section className="lang">
                         <h2>ភាសា/Language</h2>
                         <span className="eng">
@@ -31,7 +34,7 @@ function ProfilePopup(props) {
                             <p>Dark Mode</p>
                             <button className="switch">
                                 <div className="handle"></div>
-                                <div className="switch-bg"></div>  
+                                <div className="switch-bg"></div>
                             </button> {/*iphone switch btn style */}
                         </span>
                     </section>

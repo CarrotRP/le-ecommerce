@@ -9,6 +9,7 @@ function CartPopup(props) {
                     <p className="close" onClick={props.handleCartPopupClose}>&#215;</p>
                 </div>
                 <section className="cart-items">
+                    {/*for seller add */}
                     {/*cart template */}
                     <CartCard />
                 </section>
